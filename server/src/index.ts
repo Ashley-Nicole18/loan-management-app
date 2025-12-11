@@ -1,7 +1,20 @@
-import express from "express";
+import express, { Express } from "express";
+import authRoutes from "./routes/auth"
+import cors from "cors";
 
 const app = express();
 const PORT = process.env.PORT || 4000;
+
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
+
+app.use(express.json());
+app.use('/api', authRoutes)
 
 app.get("/", (_req, res) => {
   res.send("Hello from Express + TypeScript");
