@@ -1,5 +1,5 @@
 import bcrypt from "bcrypt";
-import pool from "./pool";
+import pool from "./pool.js";
 
 const users = [
     {name: 'Ashley', username: 'ashley', password: 'tresMarias-Ashley', role: 'Investor'},
