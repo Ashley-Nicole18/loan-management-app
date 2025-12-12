@@ -8,8 +8,13 @@ const PORT = process.env.PORT || 4000;
 app.use(
   cors({
     origin: [
-      "http://localhost:5173",
-      "loan-management-gvrk7j59r-ashleys-projects-032f2530.vercel.app"
+      "http://localhost:5173", 
+      
+      "https://loan-management-app-wine.vercel.app",
+
+      "https://loan-management-app-git-main-ashleys-projects-032f2530.vercel.app",
+      
+      "https://loan-management-app-ashleys-projects-032f2530.vercel.app"
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
