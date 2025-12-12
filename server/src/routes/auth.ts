@@ -1,5 +1,5 @@
 import express from "express"
-import pool from "../db/pool"
+import pool from "../db/pool.js"
 import bcrypt from "bcrypt"
 import jwt from "jsonwebtoken"
 
