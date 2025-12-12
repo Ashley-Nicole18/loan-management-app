@@ -16,7 +16,7 @@ router.post("/login", async (req, res) => {
 
         const user = result.rows[0]
 
-        if (!user) {
+        if (result.rows.length === 0) {
             return res.status(401).json({message: "You are not qualified to access this website"})
         }
 
